@@ -1,0 +1,354 @@
+/* GLOBAL RESET & SCROLL-SNAP SETUP */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #d0c4bc;
+  color: #1D1E21;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* MAKE EACH SECTION FULL SCREEN */
+#about,
+#experience,
+#accomplishment,
+#contacts {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 30px 70px 10px;
+  background-color: #d8d7d7; /* contrast color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 40px;
+}
+
+.letter {
+  width: 50px;
+}
+
+.name {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.header-container {
+  display: flex;
+  gap: 50px;
+}
+
+.header-container a {
+  font-family: 'Montserrat', sans-serif;
+  color: #fc5e24;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-container a:hover {
+  background-color: #fc5e24;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* ABOUT ME */
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  margin-top: 0;           /* remove top margin */
+  padding: 0 20px;         /* adjust padding */
+  text-align: center;
+}
+
+.me {
+  font-size: 7rem;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 20px;
+}
+
+.aquinocolor {
+  color: #fc5e24;
+}
+
+.description {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.resume,
+.button {
+  margin-top: 30px;
+}
+
+.button {
+  padding: 10px 30px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+/* PROFILE IMAGE */
+.img,
+.my-picture {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.my-picture {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* EXPERIENCE */
+.experience-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  padding: 0 40px;
+  text-align: center;
+}
+
+.experience-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 7rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #1D1E21;
+}
+
+.experience-contain {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+.experience {
+  background-color: #c5c2c0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.experience img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.experience div {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* MY WORKS */
+.ads-showcase {
+  padding: 100px 50px;
+  background-color: #d0c4bc;
+  text-align: center;
+}
+
+.section-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1D1E21;
+}
+
+.works-intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  text-align: justify;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ads-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.ad-card img {
+  width: 100%;
+  max-width: 400px;
+  height:700px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.ad-card:hover {
+  transform: scale(1.03);
+}
+
+.ad-text {
+  padding: 20px;
+}
+
+.ad-text h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fc5e24;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ad-text p {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  padding: 80px 40px;
+  background-color: #eae6e2;
+  text-align: center;
+}
+
+.contact-intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.social-icons img {
+  width: 60px;
+  transition: transform 0.5s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+.contact-details p {
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-details a {
+  color: #fc5e24;
+  text-decoration: none;
+}
+
+/* ANIMATIONS */
+.hidden {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1.5s ease 0.5s forwards;
+  transform: translateY(20px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .me {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  .ads-gallery {
+    grid-template-columns;
+  }
+}
